@@ -1,9 +1,8 @@
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
-<h1 align="center"> 𝐊𝐄𝐈𝐓𝐇-𝐌𝐃 </h1>
+<h1 align="center"DESTINY MD </h1>
 
  
-<h1 align="center"> Survival is winning frankline everything else is bullshit,fairy tales spun by people afraid to look life in the eye,do whatever it takes kid ,,survive 😏🙏
-</h1>
+
 
 
 
