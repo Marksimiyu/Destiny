@@ -5,7 +5,7 @@ module.exports = async (client, m, isBotAdmin, itsMe, isAdmin, Owner, body, anti
         'whatsapp.com'
     ];
 
-    // Check if the message contains any forbidden link and the group settings allow link removal
+    // Check if the message contains any forbidden link, group settings allow link removal, and user is not admin
     if (body && forbiddenLinks.some(link => body.includes(link)) && m.isGroup && antilink === 'true' && !Owner && isBotAdmin && !isAdmin) {
         if (itsMe) return;  // Skip if the message is from the bot
 
@@ -27,7 +27,14 @@ module.exports = async (client, m, isBotAdmin, itsMe, isAdmin, Owner, body, anti
             }
         });
 
-        // Remove the user from the group
-        await client.groupParticipantsUpdate(m.chat, [kid], 'remove');
+        if (!isBotAdmin) {
+           
+            await client.sendMessage(m.chat, {
+                text: 'Please promote me to an admin to be able to remove link senders from the group.',
+            });
+        } else {
+         
+            await client.groupParticipantsUpdate(m.chat, [kid], 'remove');
+        }
     }
 };

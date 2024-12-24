@@ -19,6 +19,8 @@ const sessionName = "session";
 const presence = process.env.WA_PRESENCE || 'online';
 
 const antitag = process.env.ANTITAG || 'true';
+const api = process.env.API || 'true';
+const appname = process.env.APPNAME || 'true';
 const antispam = process.env.ANTISPAM || 'true';
 const chatbot = process.env.CHAT_BOT || 'true';
 const antilink = process.env.ANTILINK || 'true';
@@ -29,6 +31,7 @@ const antibad = process.env.ANTI_BAD_WORD || 'true';
 const antidelete = process.env.ANTIDELETE || 'true';
 const autoview = process.env.AUTOVIEW_STATUS || 'true';
 const autolike = process.env.AUTOLIKE_STATUS || 'true';
+const permit = process.env.PM_PERMIT || 'true';
 const autoread = process.env.AUTOREAD || 'true';
 const autobio = process.env.AUTOBIO || 'false';
 
@@ -38,6 +41,9 @@ module.exports = {
   autoview,
   autoread,
   botname,
+  api,
+  appname,
+  permit,
   autobio,
   autoreact,
   mode,
